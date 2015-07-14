@@ -46,7 +46,7 @@ $(document).ready(function () {
         var lastName = obj.lastName;
         var description = obj.description;
 
-        var code = "<figure class='effect-zoe' id='one'> <img src='" + img.src + "' alt='img25' id='one' /><figcaption> <h2 class = 'piece-name'> " + firstName + " <span> " + lastName + " </span></h2><p class='icon-links'> <a href='#'> <span class='icon-heart'> </span></a><a href='#'> <span class='icon-eye'> </span></a><a href='#'> <span class = 'icon-paper-clip'> </span></a></p> <p class='description'>" + description + " </p> </figcaption> </figure> "
+        var code = "<figure class='effect-zoe' id='one'> <img src='" + img.src + "' alt='img25' id='one' /><figcaption> <h2 class = 'piece-name'> " + firstName + " <span> " + lastName + " </span></h2><p class='icon-links'> <a href='#'> <span class='icon-heart'> </span></a><a href='#'> <span class='icon-eye'> </span></a><a href='#'> <span class = 'icon-paper-clip'> </span></a></p> <p class='description'>" + description + " </p><input name='star1' class='input-field star' placeholder='value'/> </figcaption> </figure> "
 
         var output = $.parseHTML(code);
 
