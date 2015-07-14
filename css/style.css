@@ -56,7 +56,7 @@ body {
 .grid {
     position: relative;
     margin: 0 auto;
-    padding: 1em 0 4em;
+    padding: 4em 4em 4em;
     max-width: 1000px;
     list-style: none;
     text-align: center;
@@ -68,11 +68,11 @@ body {
     position: relative;
     float: left;
     overflow: hidden;
-    margin: 10px 1%;
+    margin: 0px 0%;
     min-width: 320px;
     max-width: 480px;
     max-height: 360px;
-    width: 48%;
+    width: 50%;
     background: #3085a3;
     text-align: center;
     cursor: pointer;
@@ -152,6 +152,19 @@ figure.effect-zoe:hover p.icon-links a:focus {
     color: #252d31;
 }
 figure.effect-zoe p.description {
+    position: absolute;
+    bottom: 8em;
+    padding: 2em;
+    color: #fff;
+    text-transform: none;
+    font-size: 90%;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+    -webkit-backface-visibility: hidden;
+    /* Fix for Chrome 37.0.2062.120 (Mac) */
+}
+figure.effect-zoe.star {
     position: absolute;
     bottom: 8em;
     padding: 2em;

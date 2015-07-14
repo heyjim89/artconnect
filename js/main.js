@@ -27,6 +27,13 @@ $(document).ready(function () {
                 "lastName": "Kojima",
                 "description": "A mib from Rose Roads (Junichi Kojima)"
 
+            },
+            {
+                "src": "http://i.imgur.com/KcQqn1E.jpg",
+                "firstName": "John",
+                "lastName": "Kobuki",
+                "description": "A mib from John Kobuki"
+
             }
         ]
 
