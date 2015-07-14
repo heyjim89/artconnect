@@ -1,8 +1,3 @@
-//var appending = document.getElementById("art").innerHTML = firstImage.src;
-//
-//$('.effect-zoe').append(appending)
-//"name": "Work of Art",
-//            "data": "Main Text"
 $(document).ready(function () {
     var data = {
         "images": [
@@ -43,15 +38,11 @@ $(document).ready(function () {
         var firstName = obj.firstName;
         var lastName = obj.lastName;
         var description = obj.description;
-        //        console.log(data.images.firstName)
-        //        console.log(data.images)
-        //        console.log(data)
-        console.log(firstName)
 
         var code = "<figure class='effect-zoe' id='one'> <img src='" + img.src + "' alt='img25' id='one' /><figcaption> <h2 class = 'piece-name'> " + firstName + " <span> " + lastName + " </span></h2><p class='icon-links'> <a href='#'> <span class='icon-heart'> </span></a><a href='#'> <span class='icon-eye'> </span></a><a href='#'> <span class = 'icon-paper-clip'> </span></a></p> <p class='description'>" + description + " </p> </figcaption> </figure> "
+
         var output = $.parseHTML(code);
 
-        //        $('.grid').append(code)
-        $('.grid').append(output)
+        $('.grid').append(output);
     });
 });
