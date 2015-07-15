@@ -1,9 +1,12 @@
-console.log($)
+$(document).ready(function() {
+    $('.materialboxed').materialbox();
+});
 
-var pageState = function () {
-   setTimeout(function () {
-       $('.grid').html(JSON.parse(localStorage["contents"]));
-   }, 500);
+
+var pageState = function() {
+    setTimeout(function() {
+        $('.grid').html(JSON.parse(localStorage["contents"]));
+    }, 500);
 };
 
 pageState();
@@ -13,7 +16,7 @@ $(document).on('ready', function() {
     var pieceId = 0;
 
 
-    var Piece = function (src, artist, description) {
+    var Piece = function(src, artist, description) {
         this.src = src;
         this.artist = artist;
         this.description = description;
@@ -23,8 +26,8 @@ $(document).on('ready', function() {
         console.log(this)
     }
 
-    Piece.prototype.create = function () {
-        var $pieceBlock = $('<figure class="effect-zoe" id="one"> <img src="' + this.src + '" alt="img25" id="one" /><figcaption> <h2 class = "piece-name"> "' + this.artist + '" <span> </span></h2><p class="icon-links"> <a href="#"> <span class="icon-heart"> </span></a><a href="#"> <span class="icon-eye"> </span></a><a href="#"> <span class = "icon-paper-clip"> </span></a></p> <p class="description"> </p><input name="star1" class="input-field star" placeholder="value"/> </figcaption> </figure> ');
+    Piece.prototype.create = function() {
+        var $pieceBlock = $('<figure class="effect-zoe" id="one"> <img src="' + this.src + '" alt="img25" id="one" class="materialboxed" /><figcaption> <h2 class = "piece-name"> "' + this.artist + '" <span> </span></h2><p class="icon-links"> <a href="#"> <span class="icon-heart"> </span></a><a href="#"> <span class="icon-eye"> </span></a><a href="#"> <span class = "icon-paper-clip"> </span></a></p> <p class="description">"' + this.description + '" </p><input name="star1" class="input-field star" placeholder="value"/> </figcaption> </figure> ');
         this.el = $pieceBlock;
 
         return this.el
@@ -38,24 +41,24 @@ $(document).on('ready', function() {
 
     // --- RATING --- //
 
-    $(document).on('click', '#submit', function(){
+    $(document).on('click', '#submit', function() {
         var q = $('#src').val();
         var a = $('#artist').val();
         var d = $('#description').val();
 
-               // if (q === '') {
-               //     $('.qt-err').after('<p class="error">Oops, please enter a quote.</p>')
-               //     setTimeout(function () {
-               //         var error = $('.error').fadeOut(4000).remove();
-               //     }, 6000);
-               // }
-        
-               // if (a === '') {
-               //     $('.auth-err').after('<p class="error">Oops, please enter an author.</p>')
-               //     setTimeout(function () {
-               //         var error = $('.error').fadeOut(4000).remove();
-               //     }, 6000);
-               // } else {
+        // if (q === '') {
+        //     $('.qt-err').after('<p class="error">Oops, please enter a quote.</p>')
+        //     setTimeout(function () {
+        //         var error = $('.error').fadeOut(4000).remove();
+        //     }, 6000);
+        // }
+
+        // if (a === '') {
+        //     $('.auth-err').after('<p class="error">Oops, please enter an author.</p>')
+        //     setTimeout(function () {
+        //         var error = $('.error').fadeOut(4000).remove();
+        //     }, 6000);
+        // } else {
         var setPiece = new Piece(q, a, d);
 
         $('input').val('');
@@ -66,6 +69,10 @@ $(document).on('ready', function() {
 
 
         localStorage["contents"] = JSON.stringify($('.grid').html());
+    });
+    $(document).on('click', '#clear', function() {
+        localStorage.clear();
+        window.location.reload()
     });
 });
 
