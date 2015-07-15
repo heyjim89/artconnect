@@ -1,120 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-    <title>Artist Connect</title>
-
-    <!-- CSS  -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
-</head>
-
-<body>
-    <ul id="dropdown1" class="dropdown-content">
-        <li><a href="#!">Edit Profile</a></li>
-        <li><a href="#!">Add Product</a></li>
-        <li class="divider"></li>
-        <li><a href="#!">Logout</a></li>
-    </ul>
-    <nav>
-        <div class="nav-wrapper red darken-3">
-            <a href="#!" class="brand-logo left">CraftConnect</a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="browse.html">Browse</a></li>
-                <li><a href="#">About</a></li>
-                <!-- Dropdown Trigger -->
-                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!--Main Content Begin-->
-    <div class="section no-pad-bot" id="index-banner">
-        <br>
-        <br>
-        <div class="container">
-            <div class="browse-container row">
-                <h4>Browse</h4>
-                <div class="grid">
-                    <!--
-<figure class="effect-zoe" id="one">
-    <img src="img/25.jpg" alt="img25" id="one" />
-
-    <figcaption>
-        <h2 class="piece-name">Creative <span>Zoe</span></h2>
-
-
-        <p class="icon-links">
-            <a href="#"><span class="icon-heart"></span></a>
-            <a href="#"><span class="icon-eye"></span></a>
-            <a href="#"><span class="icon-paper-clip"></span></a>
-        </p>
-
-
-
-        <p class="description">Zoe never had the patience of her sisters. She deliberately punched the bear in his face.</p>
-
-        <input name="value" class="input-field" />
-    </figcaption>
-</figure>
--->
-
-                </div>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+        <title>Artist Connect</title>
+        <!-- CSS  -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    </head>
+    <body>
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#!">Edit Profile</a></li>
+            <li><a href="#!">Add Product</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">Logout</a></li>
+        </ul>
+        <nav>
+            <div class="nav-wrapper red darken-3">
+                <a href="#!" class="brand-logo left">CraftConnect</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Browse</a></li>
+                    <li><a href="#">About</a></li>
+                    <!-- Dropdown Trigger -->
+                    <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
             </div>
-        </div>
-
-
-
-
-
-        <footer class="page-footer red darken-4">
+        </nav>
+        <!--Main Content Begin-->
+        <div class="section no-pad-bot" id="index-banner">
+            <br>
+            <br>
             <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">Who I am</h5>
-                        <p class="grey-text text-lighten-4">I'm just a guy who wants to assist artists and collectors in their journey to find their dream pieces.</p>
+                <div class="browse-container row">
+                    <div class="row">
+                        <div class="col s12 center-align">
+                            
+                            <input name="src" class="input input-piece" id="src" placeholder="Image URL" />
+                            <input name="artist" class="input input-piece" id="artist" placeholder="Artist" />
+                            <input name="description" class="input input-piece" id="description" placeholder="Description" />
+                            <div class="row">
+                                <div class="col center-align">
+                                    <input type="submit" value="submit" id="submit" class="submit">
+                                    <input type="submit" value="clear" id="clear" class="clear" placeholder="clear">
 
-
-                    </div>
-                    <div class="col l3 s12">
-                        <h5 class="white-text">Settings</h5>
-                        <ul>
-                            <li><a class="white-text" href="#!">Link 1</a></li>
-                            <li><a class="white-text" href="#!">Link 2</a></li>
-                            <li><a class="white-text" href="#!">Link 3</a></li>
-                            <li><a class="white-text" href="#!">Link 4</a></li>
-                        </ul>
-                    </div>
-                    <div class="col l3 s12">
-                        <h5 class="white-text">Connect</h5>
-                        <ul>
-                            <li><a class="white-text" href="#!">Link 1</a></li>
-                            <li><a class="white-text" href="#!">Link 2</a></li>
-                            <li><a class="white-text" href="#!">Link 3</a></li>
-                            <li><a class="white-text" href="#!">Link 4</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    Made by <a class="orange-text text-lighten-3" href="http://heyjim89.github.io">Jim Dwyer</a>
-                </div>
-            </div>
-        </footer>
-
-
-        <!--  Scripts-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
-        <script src="js/materialize.js"></script>
-        <script src="js/init.js"></script>
-        <script src="js/main.js"></script>
-
-</body>
-
-</html>
+                                </div></div>
+                                
+                            </div></div>
+                            <div class=""
+                                <p class="row"> http://i.imgur.com/W2YoxQy.jpg
+                                    http://i.imgur.com/fHlXEjA.jpg
+                                    http://i.imgur.com/1ULewEl.jpg,
+                                    http://i.imgur.com/jLX2OqI.jpg,
+                                http://i.imgur.com/KcQqn1E.jpg,</p>
+                                <div class="row">
+                                    <div class="col s12 center-align">
+                                        <form action="#">
+                                            <div class="file-field input-field">
+                                                <input class="file-path validate" type="text"/>
+                                                <div class="btn ">
+                                                    <span>Upload</span>
+                                                    <input type="file" />
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div></div>
+                                    <div class="grid">
+                                        <!--
+                                        <figure class="effect-zoe" id="one">
+                                            <img src="img/25.jpg" alt="img25" id="one" />
+                                            <figcaption>
+                                            <h2 class="piece-name">Creative <span>Zoe</span></h2>
+                                            <p class="icon-links">
+                                                <a href="#"><span class="icon-heart"></span></a>
+                                                <a href="#"><span class="icon-eye"></span></a>
+                                                <a href="#"><span class="icon-paper-clip"></span></a>
+                                            </p>
+                                            <p class="description">Zoe never had the patience of her sisters. She deliberately punched the bear in his face.</p>
+                                            <input name="value" class="input-field" />
+                                            </figcaption>
+                                        </figure>
+                                        -->
+                                    </div>
+                                </div>
+                            </div>
+                            <footer class="page-footer red darken-4">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col l6 s12">
+                                            <h5 class="white-text">Who I am</h5>
+                                            <p class="grey-text text-lighten-4">I'm just a guy who wants to assist artists and collectors in their journey to find their dream pieces.</p>
+                                        </div>
+                                        <div class="col l3 s12">
+                                            <h5 class="white-text">Settings</h5>
+                                            <ul>
+                                                <li><a class="white-text" href="#!">Link 1</a></li>
+                                                <li><a class="white-text" href="#!">Link 2</a></li>
+                                                <li><a class="white-text" href="#!">Link 3</a></li>
+                                                <li><a class="white-text" href="#!">Link 4</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col l3 s12">
+                                            <h5 class="white-text">Connect</h5>
+                                            <ul>
+                                                <li><a class="white-text" href="#!">Link 1</a></li>
+                                                <li><a class="white-text" href="#!">Link 2</a></li>
+                                                <li><a class="white-text" href="#!">Link 3</a></li>
+                                                <li><a class="white-text" href="#!">Link 4</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="footer-copyright">
+                                    <div class="container">
+                                        Made by <a class="orange-text text-lighten-3" href="http://heyjim89.github.io">Jim Dwyer</a>
+                                    </div>
+                                </div>
+                            </footer>
+                            <!--  Scripts-->
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+                            <script src="js/materialize.js"></script>
+                            <script src="js/init.js"></script>
+                            <script src="js/main.js"></script>
+                        </body>
+                    </html>

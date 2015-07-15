@@ -24,6 +24,9 @@ img:hover {
     font-size: 12px;
     text-align: center;
 }
+.input-piece{
+    margin-top:10px;
+}
 
 /* force scrollbar */
 
@@ -36,9 +39,24 @@ body {
 .grid {
     background: #DDD;
 }
-
+input               {
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:inline-block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid #757575;
+  float:left;
+  color:#C62828;
+}
+input:focus         { outline:none; }
 /* clear fix */
-
+.submit{
+    position: relative;
+    margin:none;
+    left:300px;
+    float:none !important;
+}
 .grid:after {
     content: '';
     display: block;
