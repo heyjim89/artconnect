@@ -56,17 +56,20 @@ input               {
 }
 input:focus         { outline:none; }
 /* clear fix */
-
+.dropdown-container{
+    position: absolute;
+      top: 10px;
+  left: 10px;
+    
+}
 .dropdown-rating{
     position: absolute;
-    top:65px;
-    left:75px;
+ 
 }
-.submit{
+.buttons{
     position: relative;
-    margin:none;
-    left:300px;
-    float:none !important;
+    margin:10px 10px 10px 0px;
+    padding:auto;
 }
 .grid:after {
     content: '';

@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $('.materialboxed').materialbox();
 });
+
 var createDropdown = function(){
              $('.dropdown-button').dropdown({
       inDuration: 300,
@@ -48,7 +49,9 @@ $(document).on('ready', function() {
     }
 
     Piece.prototype.create = function() {
-        var $pieceBlock = $('<figure class="effect-zoe" id="one"> <img src="' + this.src + '" alt="img25" id="one" class="materialboxed" /><figcaption> <h2 class = "piece-name"> "' + this.artist + '" <span> </span></h2><p class="icon-links"> <a href="#"> <span class="icon-heart"> </span></a><a href="#"> <span class="icon-eye"> </span></a><a href="#"> <span class = "icon-paper-clip"> </span></a></p> <p class="description">"' + this.description + '" </p><input name="star1" class="input-field star" placeholder="value"/> </figcaption> </figure> <div class="row dropdown-rating"><a class="dropdown-button btn orange" href="#" data-activates="dropdown2">Rate</a><ul id="dropdown2" class="dropdown-content"><li><a href="#!">1</a></li><li><a href="#!">2</a></li><li><a href="#!">3</a></li><li><a href="#!">4</a></li><li><a href="#!">5</a></li></ul></div> ');
+        var d = new Date();
+        var dropdownTime = d.getTime();
+        var $pieceBlock = $('<figure class="effect-zoe" id="one"> <img src="' + this.src + '" alt="img25" id="one" class="materialboxed" /><figcaption> <h2 class = "piece-name"> "' + this.artist + '" <span> </span></h2><p class="icon-links"> <a href="#"> <span class="icon-heart"> </span></a><a href="#"> <span class="icon-eye"> </span></a><a href="#"> <span class = "icon-paper-clip"> </span></a></p> <p class="description">"' + this.description + '" </p><input name="star1" class="input-field star" placeholder="value"/> </figcaption> <div class="dropdown-container"><a class="dropdown-button btn red darken-3" href="#" data-activates="dropdown'+dropdownTime+'">Rate</a><ul id="dropdown'+dropdownTime+'" class="dropdown-content"><li><a href="#!">1</a></li><li><a href="#!">2</a></li><li><a href="#!">3</a></li><li><a href="#!">4</a></li><li><a href="#!">5</a></li></ul></div> </figure> ');
         this.el = $pieceBlock;
 
         return this.el
@@ -85,7 +88,7 @@ $(document).on('ready', function() {
 
         $('input').val('');
         console.log("ABOUT TO APPEND")
-        
+
         $('.grid').append(setPiece.create());
         createDropdown();
          
