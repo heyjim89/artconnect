@@ -1,19 +1,40 @@
 $(document).ready(function() {
     $('.materialboxed').materialbox();
 });
-
+var createDropdown = function(){
+             $('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrain_width: false, // Does not change width of dropdown to that of the activator
+      hover: true, // Activate on hover
+      gutter: 0, // Spacing from edge
+      belowOrigin: false // Displays dropdown below the button
+    });
+  };
 
 var pageState = function() {
     setTimeout(function() {
         $('.grid').html(JSON.parse(localStorage["contents"]));
+
+          $('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrain_width: false, // Does not change width of dropdown to that of the activator
+      hover: true, // Activate on hover
+      gutter: 0, // Spacing from edge
+      belowOrigin: false // Displays dropdown below the button
+    }
+  );
     }, 500);
 };
 
 pageState();
+createDropdown();   
 
 $(document).on('ready', function() {
     var AllPieces = []
     var pieceId = 0;
+
 
 
     var Piece = function(src, artist, description) {
@@ -27,24 +48,25 @@ $(document).on('ready', function() {
     }
 
     Piece.prototype.create = function() {
-        var $pieceBlock = $('<figure class="effect-zoe" id="one"> <img src="' + this.src + '" alt="img25" id="one" class="materialboxed" /><figcaption> <h2 class = "piece-name"> "' + this.artist + '" <span> </span></h2><p class="icon-links"> <a href="#"> <span class="icon-heart"> </span></a><a href="#"> <span class="icon-eye"> </span></a><a href="#"> <span class = "icon-paper-clip"> </span></a></p> <p class="description">"' + this.description + '" </p><input name="star1" class="input-field star" placeholder="value"/> </figcaption> </figure> ');
+        var $pieceBlock = $('<figure class="effect-zoe" id="one"> <img src="' + this.src + '" alt="img25" id="one" class="materialboxed" /><figcaption> <h2 class = "piece-name"> "' + this.artist + '" <span> </span></h2><p class="icon-links"> <a href="#"> <span class="icon-heart"> </span></a><a href="#"> <span class="icon-eye"> </span></a><a href="#"> <span class = "icon-paper-clip"> </span></a></p> <p class="description">"' + this.description + '" </p><input name="star1" class="input-field star" placeholder="value"/> </figcaption> </figure> <div class="row dropdown-rating"><a class="dropdown-button btn orange" href="#" data-activates="dropdown2">Rate</a><ul id="dropdown2" class="dropdown-content"><li><a href="#!">1</a></li><li><a href="#!">2</a></li><li><a href="#!">3</a></li><li><a href="#!">4</a></li><li><a href="#!">5</a></li></ul></div> ');
         this.el = $pieceBlock;
 
         return this.el
     }
-
-    // working on some logic here to make even .quote-block divs a med. gray BG color
-    // console.log(this.id % 2)
-    // 	if ( (this.id % 2) != 0 ){
-    // 		$('.quote-block').addClass('.even-block');
-    // 	}
-
-    // --- RATING --- //
-
+  // $('.dropdown-button').dropdown({
+  //     inDuration: 300,
+  //     outDuration: 225,
+  //     constrain_width: false, // Does not change width of dropdown to that of the activator
+  //     hover: true, // Activate on hover
+  //     gutter: 0, // Spacing from edge
+  //     belowOrigin: false // Displays dropdown below the button
+  //   }
+  // );
     $(document).on('click', '#submit', function() {
         var q = $('#src').val();
         var a = $('#artist').val();
         var d = $('#description').val();
+
 
         // if (q === '') {
         //     $('.qt-err').after('<p class="error">Oops, please enter a quote.</p>')
@@ -63,12 +85,19 @@ $(document).on('ready', function() {
 
         $('input').val('');
         console.log("ABOUT TO APPEND")
+        
         $('.grid').append(setPiece.create());
+        createDropdown();
+         
+         
+          
         //                                $('.quote-text').last().append(q);
         //                                $('.author').last().append('-' + ' ' + a);
 
 
         localStorage["contents"] = JSON.stringify($('.grid').html());
+
+
     });
     $(document).on('click', '#clear', function() {
         localStorage.clear();
