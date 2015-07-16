@@ -89,7 +89,7 @@ $(document).on('ready', function() {
         $('input').val('');
         console.log("ABOUT TO APPEND")
 
-        $('.grid').append(setPiece.create());
+        $('.grid').prepend(setPiece.create());
         createDropdown();
          
          

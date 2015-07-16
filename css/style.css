@@ -69,7 +69,7 @@ input:focus         { outline:none; }
 .buttons{
     position: relative;
     margin:10px 10px 10px 0px;
-    padding:auto;
+    padding-bottom:auto;
 }
 .grid:after {
     content: '';
