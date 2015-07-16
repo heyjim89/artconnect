@@ -16,9 +16,9 @@ img:hover {
     box-sizing: border-box;
 }
 .upload{
-    position:fixed;
-    top:0;
-    left:20px;
+    position:relative;
+    margin-top:15px;
+    left:5px;
 }
 .input-field {
     margin-top: 3px;
