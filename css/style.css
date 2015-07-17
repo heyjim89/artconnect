@@ -20,6 +20,11 @@ img:hover {
     margin-top:15px;
     left:5px;
 }
+.cheatsheet{
+    position: relative;
+    margin: 5px;
+
+}
 .input-field {
     margin-top: 3px;
     width: 60px;
